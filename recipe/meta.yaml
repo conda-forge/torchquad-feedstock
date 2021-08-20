@@ -1,7 +1,7 @@
 {% set name = "torchquad" %}
 {% set org = "esa" %}
-{% set version = "0.2.1" %}
-{% set sha256 = "bca1a3612a31d32b9c73c80344cabdc1dbaa5aab3bfeb04f9c91cb57d0194b1c" %}
+{% set version = "0.2.3" %}
+{% set sha256 = "f111c5bd1e36fe2b0be48406c1fdc4db7be102c04f2c42a043df8b7456d12183" %}
 
 package:
   name: {{ name|lower }}
@@ -14,12 +14,12 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python >=3.8
-    - pip 
+    - pip
     - setuptools
   run:
     - python >=3.8
@@ -41,7 +41,7 @@ about:
   license: GPL-3.0-only
   license_family: GPL3
   license_file: LICENSE
-  summary: 'torchquad provides torch-based numerical integration methods.'
+  summary: torchquad provides torch-based numerical integration methods.
   description: |
     This project allows utilizing GPUs for efficient numerical 
     integration with PyTorch. It  is designed for the machine learning 
@@ -52,4 +52,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - gomezzz 
+    - gomezzz
