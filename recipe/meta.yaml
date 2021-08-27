@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.8
     - matplotlib-base >=3.3.3
-    - loguro>=0.5.3
+    - loguro >=0.5.3
     - pytorch ==1.9
     - scipy >=1.6.0
     - tqdm >=4.56.0
