@@ -23,9 +23,10 @@ requirements:
     - setuptools
   run:
     - python >=3.8
-    - matplotlib-base >=3.3.3
+    - matplotlib-base >=3.3.3 
     - loguru >=0.5.3
-    - pytorch ==1.9
+    - pytorch >=1.7.1
+    - numpy
     - scipy >=1.6.0
     - tqdm >=4.56.0
 
