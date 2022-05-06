@@ -1,7 +1,7 @@
 {% set name = "torchquad" %}
 {% set org = "esa" %}
-{% set version = "0.2.3" %}
-{% set sha256 = "f111c5bd1e36fe2b0be48406c1fdc4db7be102c04f2c42a043df8b7456d12183" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "e2b289035e9c95459c8d08773d02431603f1889cb01d3e44df6775992c21e20e" %}
 
 package:
   name: {{ name|lower }}
@@ -23,9 +23,9 @@ requirements:
     - setuptools
   run:
     - python >=3.8
-    - matplotlib-base >=3.3.3 
+    - matplotlib-base >=3.3.3
     - loguru >=0.5.3
-    - pytorch >=1.7.1
+    - autoray >=0.2.5
     - numpy
     - scipy >=1.6.0
     - tqdm >=4.56.0
