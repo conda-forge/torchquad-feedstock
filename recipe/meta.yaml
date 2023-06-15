@@ -25,7 +25,7 @@ requirements:
     - python >=3.8
     - matplotlib-base >=3.3.3
     - loguru >=0.5.3
-    - autoray >=0.2.5
+    - autoray >=0.5.0
     - numpy
     - scipy >=1.6.0
     - tqdm >=4.56.0
