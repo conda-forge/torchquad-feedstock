@@ -1,11 +1,11 @@
-About torchquad
-===============
+About torchquad-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/torchquad-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/esa/torchquad/
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/torchquad-feedstock/blob/main/LICENSE.txt)
 
 Summary: torchquad provides torch-based numerical integration methods.
 
