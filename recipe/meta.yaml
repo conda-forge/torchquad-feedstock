@@ -1,7 +1,7 @@
 {% set name = "torchquad" %}
 {% set org = "esa" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "9ff4e478f34f1577cf1966222cd5ef74455a348135732cd1cbc2f52bbb2abdd2" %}
+{% set version = "0.6.0" %}
+{% set sha256 = "92f87b771e9a1e26ec5f25c55b37ea6eb8a477fc0c0aa6873dd687e6a245557b" %}
 
 package:
   name: {{ name|lower }}
