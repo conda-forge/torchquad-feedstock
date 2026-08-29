@@ -1,7 +1,7 @@
 {% set name = "torchquad" %}
 {% set org = "esa" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "9ff4e478f34f1577cf1966222cd5ef74455a348135732cd1cbc2f52bbb2abdd2" %}
+{% set version = "0.6.0" %}
+{% set sha256 = "92f87b771e9a1e26ec5f25c55b37ea6eb8a477fc0c0aa6873dd687e6a245557b" %}
 
 package:
   name: {{ name|lower }}
@@ -20,21 +20,23 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - setuptools >=77.0.3
   run:
     - python >={{ python_min }}
-    - matplotlib-base >=3.3.3
     - loguru >=0.5.3
     - autoray >=0.5.0
-    - numpy
-    - scipy >=1.6.0
-    - tqdm >=4.56.0
+    - numpy >=1.21.3
+    - scipy >=1.7.2
 
 test:
   imports:
     - torchquad
   commands:
     - pip check
+    # Sobol imports scipy.stats.qmc lazily, inside the sampler, so a scipy floor
+    # that is too low passes the import test above and only fails once a user
+    # reaches for quasi-Monte Carlo.
+    - 'python -c "import numpy; from torchquad import Sobol; assert Sobol(''numpy'', seed=0).uniform([16, 2], numpy.float64).shape == (16, 2)"'
   requires:
     - pip
     - python {{ python_min }}
@@ -50,7 +52,7 @@ about:
     integration with PyTorch. It  is designed for the machine learning 
     community and research groups focusing on topics requiring high-dimensional 
     integration. By using PyTorch backpropagation through the integrals is possible.
-  doc_url: https://torchquad.readthedocs.io/en/release/
+  doc_url: https://torchquad.readthedocs.io/en/main/
   dev_url: https://github.com/esa/torchquad/
 
 extra:
